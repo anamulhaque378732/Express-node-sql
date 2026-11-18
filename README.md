@@ -1,1 +1,1 @@
-Node express , postf=greSQl , Sql
+ Node express PostgraSQL basic . GEt, post , put , delte method use. 
