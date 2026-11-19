@@ -1,4 +1,4 @@
-// Node express
+// MODULE - 7  Node express FUNTDAMENTAL
 
 // Express is a node js framework. Its unopinionated and minimalistic web framework and middleware based
 
@@ -17,12 +17,9 @@
  */
 // open sourese database NEON DB. Its cover bye postgresql. WE use Sql database .
 
- 
-
 // postgreSql neon ware up our project. use npm i pg
 
 // postgreSQL , documentation W3School
-
 
 // SQL --> Structure Query Language. It helps relational database. We can value insert, update , read and delate . aslo  can manage database structure
 
@@ -61,3 +58,35 @@
 
 // put method : use (COALESCE, RETURNING *) Why use this
 
+// *** module - 8 POSTGRESQL ESSENTIAL & CONNECTING EXPRESS WITH POSTGRES
+
+/** Software dessign pattern.
+ * 1. MVC pattern --> Model Views Controller
+ * 1.1 Model . includeed file (Database Schema, Business logic)
+ * 1.2 views . included file (ui/client, Tnmplate Enine)
+ * 1.3 ControLLers included file (Request, Response)
+ *
+ * Easy way (MVC + Routes) ---> (Routes, Model, View, Controllers)
+ *
+ * When use typescript (Interfaces , Routes, Models, Views , Controllers)
+ *
+ * When a project extra large you can help Modular pattern. Every Feture as a Folder
+ *
+ * 2. Modular Pattern
+ * ***Benifits Oof modular pattan
+ * a) --> Scalability
+ * b) --> Maintainability
+ * c) Better Refactoring
+ *
+ * *** Rules and Principles Of Modular pattern
+ *
+ * 1st. DRY --> don't Repeat Yourself
+ * 2nd. Fat Model (Schema, business logic)
+ * 3rd. Thin Controller (Request Response handle)
+ *
+ * Step of modulat pattern
+ * Schema --> Model --> Database Query
+ *
+ * When you use Typescript  : Interface -->Schema --> Model --> Database Query
+ *
+ *  */
