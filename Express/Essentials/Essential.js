@@ -1,4 +1,4 @@
-// MODULE - 7  Node express FUNTDAMENTAL
+// -----  MODULE - 7  Node express FUNTDAMENTAL
 
 // Express is a node js framework. Its unopinionated and minimalistic web framework and middleware based
 
@@ -90,3 +90,47 @@
  * When you use Typescript  : Interface -->Schema --> Model --> Database Query
  *
  *  */
+
+/** Database relation
+ *
+ * 1. One-to-One
+ * 2. One-to-Many
+ * 3. Many-to-One
+ * 4. Many-to-Many
+ *
+ * */
+
+// *** Authentication   +  Authorization
+
+/** Authentication (Who are you) 2 types
+ * 1. Session-Based (Stateful : Server remain all request) cons: when project lagre scale . Need huge storage
+ * 2. JWT-Bassed ( Stateless : Server not remain anything) Use this Modern apps . Its fast and maintain easy
+ *
+ * */
+
+/** Authorization (What can you do)
+ * 1. Role-Based  (RBAC: Role Based Access Control)
+ * 2 Permissinn-Based (PBAC : Permission Based Access Control)
+ * 3. Attibute-Based (ABAC : Attribute-Based Access Control)
+ * 4. Policy-Based (PBAC: Policy Based Access Control)
+ *
+ * Role-based : Admin , User, Agent,
+ * Permission-based : Read + Write, Only Read ,Only write
+ * Attribute-bassed : role--> admin , Location --> Bangladesh , Time --> Office Hours
+ *
+ * Policy-based : Premium User , Verified User
+ *
+ *
+ */
+
+// *** Bcrypt And Hashing Password (npm bcrypt)
+
+// **** JWT
+
+/** JWT : Json Web Token. Digital Token  use for User Verify
+ * 3 parts of JWT (Header, Payload, Signature  )
+ *
+ *
+ *
+ *
+ * */

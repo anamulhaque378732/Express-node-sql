@@ -3,7 +3,7 @@ import { Pool } from "pg";
 
 export const pool = new Pool({
   // database url poled
-  
+
   connectionString: config.connection_string,
 });
 
@@ -22,8 +22,20 @@ export const inintDB = async () => {
       created_at TIMESTAMP DEFAULT NOW(),
       updated_at TIMESTAMP DEFAULT NOW()
 
-      );
-      `);
+      );`);
+
+    await pool.query(`
+        CREATE TABLE IF NOT EXISTS profile (
+         id SERIAL PRIMARY KEY,
+         user_id INT  UNIQUE REFERENCES users(id) ON DELETE CASCADE,
+         bio TEXT,
+         address TEXT,
+         phone VARCHAR(15),
+         gender VARCHAR(15),
+         created_at TIMESTAMP DEFAULT NOW(),
+         updated_at TIMESTAMP DEFAULT NOW()
+        ); `);
+
     console.log("Database Connected successfully");
   } catch (error: any) {
     console.log(error.message);

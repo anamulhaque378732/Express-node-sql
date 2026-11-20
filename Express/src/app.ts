@@ -5,6 +5,7 @@ import express, {
 } from "express";
 
 import { userRoute } from "./Modules/Users/user.routes.js";
+import { profileRoute } from "./Modules/Profile/profile.route.js";
 
 const app: Application = express();
 // json format
@@ -14,24 +15,13 @@ app.use(express.text());
 // urlencded format
 app.use(express.urlencoded({ extended: true }));
 
-// post
+// user route operation
+
 app.use("/api/v1/users", userRoute);
 
-// get all
+// profile route operation
 
-app.get("/api/v1/users", userRoute);
-
-// get single user
-
-app.get("/api/v1/users/:id", userRoute);
-
-// post create user
-
-app.put("/api/v1/users/:id", userRoute);
-
-// delete user
-
-app.delete("/api/v1/users/:id", userRoute);
+app.use("/api/v1/profile", profileRoute);
 
 app.get("/", (req: Request, res: Response) => {
   res.status(200).json({
