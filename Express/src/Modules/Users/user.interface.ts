@@ -4,3 +4,10 @@ export interface IUser {
   password: string;
   age?: number;
 }
+
+export interface UUser {
+  name?: string;
+  password?: string;
+  age?: number;
+  is_Active?: boolean;
+}

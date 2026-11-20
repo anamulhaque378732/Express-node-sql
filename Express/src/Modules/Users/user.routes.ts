@@ -3,15 +3,29 @@ import { userController } from "./user.controller.js";
 
 const router = Router();
 
-// post method
+ 
 
-const { createUser } = userController;
+const { createUser, getAllUsers, getSingleUser, updateUser, deleteUser } =
+  userController;
 
-// post
+// post or create user
+
 router.post("/", createUser);
 
 // get all
 
+router.get("/", getAllUsers);
+
 // get single
+
+router.get("/:id", getSingleUser);
+
+// put update user
+
+router.put("/:id", updateUser);
+
+// delete user
+
+router.delete("/:id", deleteUser);
 
 export const userRoute = router;

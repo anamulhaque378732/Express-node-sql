@@ -3,10 +3,9 @@ import { Pool } from "pg";
 
 export const pool = new Pool({
   // database url poled
+  
   connectionString: config.connection_string,
 });
-
-// console.log(pool);
 
 // sql language create table
 
