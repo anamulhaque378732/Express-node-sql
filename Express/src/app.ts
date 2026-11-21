@@ -6,6 +6,7 @@ import express, {
 
 import { userRoute } from "./Modules/Users/user.routes.js";
 import { profileRoute } from "./Modules/Profile/profile.route.js";
+import { authRoute } from "./Modules/Auth/auth.route.js";
 
 const app: Application = express();
 // json format
@@ -22,6 +23,10 @@ app.use("/api/v1/users", userRoute);
 // profile route operation
 
 app.use("/api/v1/profile", profileRoute);
+
+// login and genate access token
+
+app.use("/api/v1/auth", authRoute);
 
 app.get("/", (req: Request, res: Response) => {
   res.status(200).json({

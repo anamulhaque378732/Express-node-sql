@@ -9,6 +9,7 @@ dotenv.config({
 const config = {
   port: process.env.PORT,
   connection_string: process.env.DATABASE_URL as string,
+  accessToken: process.env.Access_Credential as string,
 };
 
 export default config;
