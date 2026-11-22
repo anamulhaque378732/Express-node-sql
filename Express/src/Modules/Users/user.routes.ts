@@ -1,9 +1,10 @@
 import { Router } from "express";
 import { userController } from "./user.controller.js";
+import auth from "../../Moddleware/authMiddleware.js";
 
 const router = Router();
 
- 
+// user api
 
 const { createUser, getAllUsers, getSingleUser, updateUser, deleteUser } =
   userController;
@@ -14,7 +15,7 @@ router.post("/", createUser);
 
 // get all
 
-router.get("/", getAllUsers);
+router.get("/", auth, getAllUsers);
 
 // get single
 

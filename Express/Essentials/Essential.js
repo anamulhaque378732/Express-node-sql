@@ -141,7 +141,7 @@
 
 // ****  Middelware
 
-// middleware main work --> Authorization handle
+// middleware main purpose --> Authorization handle
 
 /** Middleware
  *  2 types of middleware
@@ -150,3 +150,7 @@
  */
 
 // Middleware have 3 parameter (req, res, next) . next() is function. its  taking to next step
+
+//  Namespace
+
+//  RBAC ---> Role based Access control
