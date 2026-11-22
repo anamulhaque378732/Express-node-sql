@@ -135,5 +135,18 @@
  *
  * */
 
-
 // jwt token genarate (npm jwt)
+
+// **** Authorization
+
+// ****  Middelware
+
+// middleware main work --> Authorization handle
+
+/** Middleware
+ *  2 types of middleware
+ * 1. Built-In / Default middleware
+ * 2. Custom middleware (we made this middleware)
+ */
+
+// Middleware have 3 parameter (req, res, next) . next() is function. its  taking to next step
