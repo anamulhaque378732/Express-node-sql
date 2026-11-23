@@ -159,4 +159,9 @@
 // Super admin --> all data access
 // user --> some specific data
 
-// Global error handle
+// **** Global error handle .Its a middleware (always use app.ts file . and bottom of the file)
+
+// *** CORS --> Cross-Origin Resource Sharing (use Security policy) use app.ts file
+
+
+// **** Refresh Token

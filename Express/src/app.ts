@@ -4,16 +4,26 @@ import express, {
   type Response,
 } from "express";
 
+import cors from "cors";
 import { userRoute } from "./Modules/Users/user.routes.js";
 import { profileRoute } from "./Modules/Profile/profile.route.js";
 import { authRoute } from "./Modules/Auth/auth.route.js";
 
+import logger from "./Moddleware/loggerMiddleware.js";
+import globalErrorHandler from "./Moddleware/GlobalErrorHandler.js";
+
 const app: Application = express();
 
-// file system module
+var corsOptions = {
+  // you take multiple origin
+  
+  origin: ["http://localhost:3000"],
+  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
 
-import fs from "fs";
-import logger from "./Moddleware/loggerMiddleware.js";
+app.use(cors(corsOptions));
+
+// *** file system module
 
 // json format
 app.use(express.json());
@@ -49,5 +59,9 @@ app.get("/", (req: Request, res: Response) => {
     author: "Anamul",
   });
 });
+
+// Global Error Handling Middleware
+
+app.use(globalErrorHandler);
 
 export default app;
