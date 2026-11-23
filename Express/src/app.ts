@@ -5,6 +5,8 @@ import express, {
 } from "express";
 
 import cors from "cors";
+import cookieParser from "cookie-parser";
+
 import { userRoute } from "./Modules/Users/user.routes.js";
 import { profileRoute } from "./Modules/Profile/profile.route.js";
 import { authRoute } from "./Modules/Auth/auth.route.js";
@@ -16,12 +18,17 @@ const app: Application = express();
 
 var corsOptions = {
   // you take multiple origin
-  
+
   origin: ["http://localhost:3000"],
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
+// cors
+
 app.use(cors(corsOptions));
+
+// cookie
+app.use(cookieParser());
 
 // *** file system module
 

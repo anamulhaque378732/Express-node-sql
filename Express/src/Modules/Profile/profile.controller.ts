@@ -1,5 +1,6 @@
 import type { Request, Response } from "express";
 import { profileService } from "./user.service.js";
+import sendResponse from "../../utils/sendResponse.js";
 
 const { createProfileIntoDB } = profileService;
 
@@ -7,13 +8,15 @@ const createProfile = async (req: Request, res: Response) => {
   try {
     const result = await createProfileIntoDB(req.body);
 
-    res.status(201).json({
+    sendResponse(res, {
+      statusCode: 201,
       success: true,
-      message: "Profile created successfully",
+      message: "Profile Created successfully !!",
       data: result.rows[0],
     });
   } catch (error: any) {
-    res.status(500).json({
+    sendResponse(res, {
+      statusCode: 500,
       success: false,
       message: error?.message,
       error: error,

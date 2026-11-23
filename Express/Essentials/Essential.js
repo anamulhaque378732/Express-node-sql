@@ -130,9 +130,6 @@
 /** JWT : Json Web Token. Digital Token  use for User Verify
  * 3 parts of JWT (Header, Payload, Signature  )
  *
- *
- *
- *
  * */
 
 // jwt token genarate (npm jwt)
@@ -163,5 +160,61 @@
 
 // *** CORS --> Cross-Origin Resource Sharing (use Security policy) use app.ts file
 
-
 // **** Refresh Token
+
+//  secure: false, // when http --> secure : false, when https or in production secure:true
+//   httpOnly: true, //prevent  XSS attack
+//   sameSite: // "none", "strict", "lax"
+
+
+// cokies parser . 1st login then create access token
+
+
+
+/** ** how  concept clear in this milestone 
+ * 1. client server communication
+ * 2. async nature of node js (event loop, non-blocking I/O , promise async/await)
+ * 3. Error handling,
+ * --> 3.0 Fail handle
+ * --> 3.1 why  try()catch(error){} need, 
+ * --> 3.2 how to use this 
+ * --> 3.3. how to predictable this application
+ * 
+ * 4. node modules + npm 
+ * --> 4.1 Import export
+ * --> 4.2 Built-in
+ * --> 4.3 External packages
+ * --> 4.4 package.json
+ * --> 4.5 dependencies
+ * --> 4.6 devDependencies
+ * 
+ * 5. Environment variable
+ * --> 5.1 Manage configuration
+ * --> 5.2 secure sensitive info 
+ * --> 5.3 Why need .env file
+ * --> 5.4 why we can not push secrect information in github
+ * 
+ * 6. Express request lifecycle
+ * --> 6.1  how to work middleware
+ * --> 6.2  how to routing
+ * --> 6.3 how to handle request and response
+ * 
+ * 7. REST API Fundamental
+ * --> 7.1 HTTP Method
+ * --> 7.2 Status code
+ * --> 7.3 Request parameter , params
+ * --> 7.4 body
+ * --> 7.5 Response Structure
+ * 
+ * 8. Code organaization
+ * 8.1 Route
+ * 8.2 Controller
+ * 8.3 Service 
+ * 
+ * (how to  code scalable and maintainable. )
+ * 3 question all this topic. 
+ * 1. What is it,
+ * 2. Why you use this
+ * 3. When you use this
+ * 
+ */

@@ -3,10 +3,12 @@ import { authController } from "./auth.controller.js";
 
 const router = Router();
 
-const { loginUser } = authController;
+const { loginUser, genarateToken } = authController;
 
 // login user
 
 router.post("/login", loginUser);
+
+router.post("/refresh-token", genarateToken);
 
 export const authRoute = router;
