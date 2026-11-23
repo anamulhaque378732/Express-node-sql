@@ -43,9 +43,12 @@ required by your application.
 
 Example:
 
-    PORT=5000
+    PORT=8000
     DATABASE_URL=your_postgresql_connection_string
     ACCESS_TOKEN_SECRET=your_secret_key
+    ACCESS_TOKEN=your_access_token_Secret
+    REFRESH_TOKEN=your_refresh_token_secret
+
 
   Update the variable names to match the configuration used in your
   project. Keep your .env file private and never commit secrets to
