@@ -154,3 +154,9 @@
 //  Namespace
 
 //  RBAC ---> Role based Access control
+// Some role --> admin, user, agent , moderator
+// Admin --> get all users or sensitive data
+// Super admin --> all data access
+// user --> some specific data
+
+// Global error handle

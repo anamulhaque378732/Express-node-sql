@@ -3,6 +3,7 @@ export interface IUser {
   email: string;
   password: string;
   age?: number;
+  role?: string;
 }
 
 export interface UUser {
